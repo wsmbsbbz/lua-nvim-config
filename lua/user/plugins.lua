@@ -57,11 +57,6 @@ return packer.startup(function()
       if not status_ok then return end
       surround.setup()
     end } -- Collection of minimal, independent, and fast Lua modules
-  use { "numToStr/Comment.nvim", config = function()
-      local status_ok, comment = pcall(require, "comment")
-      if not status_ok then return end
-      comment.setup()
-    end }-- Easily comment stuff
   use "chentau/marks.nvim"
   use "folke/which-key.nvim"
 
