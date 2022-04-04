@@ -1,11 +1,11 @@
-local status_ok, treesitter = pcall(require, "treesitter")
+local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   return
 end
 
 treesitter.setup {
   -- :TSInstallInfo to check languages already supported
-  ensure_installed = {'c', 'css', 'html', 'javascript', 'json', 'lua', 'python', 'yaml'},
+  ensure_installed = {'c', 'css', 'html', 'javascript', 'json', 'lua', 'python', 'yaml', 'cpp'},
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = true
