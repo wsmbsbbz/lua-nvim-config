@@ -69,7 +69,7 @@ return packer.startup(function()
       local status_ok, lualine = pcall(require, "lualine")
       lualine.setup()
     end }
-  use { "akinsho/bufferline.nvim", config = function()
+  use { "akinsho/bufferline.nvim", branch='main', config = function()
       local status_ok, bufferline = pcall(require, "bufferline")
       bufferline.setup{}
     end }
@@ -118,5 +118,5 @@ return packer.startup(function()
   use "lewis6991/gitsigns.nvim"
 
   -- terminal
-  use {"akinsho/toggleterm.nvim"}
+  use {"akinsho/toggleterm.nvim", branch='main'}
 end)
