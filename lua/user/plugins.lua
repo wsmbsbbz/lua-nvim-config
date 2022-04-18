@@ -46,6 +46,8 @@ return packer.startup(function()
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use { "numToStr/Comment.nvim", config = function()
+  -- If the version of NeoVim is below 0.7, use below code to avoid an error
+  -- use { "numToStr/Comment.nvim", commit = "0aaea32f27315e2a99ba4c12ab9def5cbb4842e4", config = function()
       local status_ok, comment = pcall(require, "comment")
       if not status_ok then return end
       comment.setup()

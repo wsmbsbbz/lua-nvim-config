@@ -2,6 +2,11 @@
 
 Deeply inspired by [LunarVim/Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
+## Requirements
+
+- `npm`
+- `g++`
+
 ## Quickstart
 
 1. Install packer.nvim
@@ -31,3 +36,7 @@ nvim nvim/lua/user/plugins.lua
 ```
 
 Then use vim command `:PackerSync` or `:w`(auto installing) to install plugins.
+
+## Notes
+
+If the version of NeoVim is below 0.7, change `Comment.nvim` in `lua/user/plugins.lua` to avoid error.
