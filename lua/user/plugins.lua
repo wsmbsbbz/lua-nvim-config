@@ -98,6 +98,7 @@ return packer.startup(function()
     "neovim/nvim-lspconfig", -- Collection of configurations for the built-in LSP client
     "williamboman/nvim-lsp-installer",
   }
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
