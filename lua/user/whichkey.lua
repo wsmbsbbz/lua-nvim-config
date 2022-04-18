@@ -98,6 +98,15 @@ local mappings = {
   ["t"] = { "<cmd>ToggleTerm direction=float<cr>", "Float Terminal" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
+  d = {
+    name = "Debug",
+    b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
+    c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+    o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+    i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+    t = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle dapui" },
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },

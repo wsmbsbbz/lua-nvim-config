@@ -119,4 +119,8 @@ return packer.startup(function()
 
   -- terminal
   use {"akinsho/toggleterm.nvim", branch='main'}
+
+  -- debugging
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use 'mfussenegger/nvim-dap-python'
 end)
