@@ -39,4 +39,4 @@ Then use vim command `:PackerSync` or `:w`(auto installing) to install plugins.
 
 ## Notes
 
-If the version of NeoVim is below 0.7, change `Comment.nvim` in `lua/user/plugins.lua` to avoid error.
+If the version of NeoVim is below 0.7, change `Comment.nvim` and `telescope.nvim` in `lua/user/plugins.lua` to avoid error.

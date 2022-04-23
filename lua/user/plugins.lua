@@ -103,7 +103,11 @@ return packer.startup(function()
   use "jose-elias-alvarez/null-ls.nvim"
 
   -- telescope
-  use "nvim-telescope/telescope.nvim"
+  use {
+    "nvim-telescope/telescope.nvim",
+    -- If the version of NeoVim is below 0.7, use below code to avoid an error
+    -- commit = "d88094f"
+  }
 
   -- nvim-tree
   use {
