@@ -59,7 +59,7 @@ return packer.startup(function()
       if not status_ok then return end
       surround.setup()
     end } -- Collection of minimal, independent, and fast Lua modules
-  use "chentau/marks.nvim"
+  use "chentoast/marks.nvim"
   use "folke/which-key.nvim"
 
   -- appearance
