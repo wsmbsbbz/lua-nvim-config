@@ -156,7 +156,8 @@ lvim.plugins = {
   --       "folke/trouble.nvim",
   --       cmd = "TroubleToggle",
   --     },
-  { "marko-cerovac/material.nvim" }
+  { "marko-cerovac/material.nvim" },
+  { "wakatime/vim-wakatime" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
