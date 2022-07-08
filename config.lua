@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "material"
+lvim.colorscheme = "OceanicNext"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -156,7 +156,7 @@ lvim.plugins = {
   --       "folke/trouble.nvim",
   --       cmd = "TroubleToggle",
   --     },
-  { "marko-cerovac/material.nvim" },
+  { "mhartington/oceanic-next" },
   { "wakatime/vim-wakatime" }
 }
 
