@@ -18,9 +18,9 @@ lvim.colorscheme = "OceanicNext"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.insert_mode["jk"]=false
-lvim.keys.insert_mode["kj"]=false
-lvim.keys.insert_mode["jj"]=false
+lvim.keys.insert_mode["jk"] = false
+lvim.keys.insert_mode["kj"] = false
+lvim.keys.insert_mode["jj"] = false
 lvim.keys.normal_mode = {
   ["<C-s>"] = ":w<cr>",
   ["<Tab>"] = ":bnex<cr>",
@@ -160,7 +160,14 @@ lvim.plugins = {
   --       cmd = "TroubleToggle",
   --     },
   { "mhartington/oceanic-next" },
-  { "wakatime/vim-wakatime" }
+  { "wakatime/vim-wakatime" },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
