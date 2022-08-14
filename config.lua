@@ -10,7 +10,7 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.colorscheme = "OceanicNext"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -60,6 +60,15 @@ lvim.keys.normal_mode = {
 --   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 --   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
 -- }
+lvim.builtin.which_key.mappings["dU"] = {
+  "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI"
+}
+lvim.builtin.which_key.mappings["de"] = {
+  "<cmd>lua require'dapui'.eval()<cr>", "Evaluate"
+}
+lvim.builtin.which_key.mappings["dE"] = {
+  "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input"
+}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -71,6 +80,13 @@ lvim.builtin.terminal.execs = { { "lazygit", "gg", "LazyGit" }, { "gdb", "tg", "
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.bufferline.options.always_show_bufferline = true
+lvim.builtin.dap.active = true
+-- WARNING: fix start_col out of bounds
+local cmp = require "cmp"
+lvim.builtin.cmp.mapping["<CR>"] = cmp.mapping.confirm {
+  behavior = cmp.ConfirmBehavior.Replace,
+  select = true,
+}
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -80,12 +96,9 @@ lvim.builtin.treesitter.ensure_installed = {
   "json",
   "lua",
   "python",
-  "typescript",
-  "tsx",
-  "css",
   "rust",
-  "java",
   "yaml",
+  "go",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -163,6 +176,24 @@ lvim.plugins = {
     config = function()
       require("todo-comments").setup()
     end,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
+    config = function()
+      vim.g.indentLine_enabled = 1
+      vim.g.indent_blankline_char = "▏"
+      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+      vim.g.indent_blankline_buftype_exclude = { "terminal" }
+      vim.g.indent_blankline_show_trailing_blankline_indent = false
+      vim.g.indent_blankline_show_first_indent_level = false
+    end
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    config = function()
+      require("dapui").setup {}
+    end
   },
 }
 
