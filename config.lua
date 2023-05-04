@@ -24,6 +24,7 @@ lvim.keys.normal_mode = {
   ["<Tab>"] = ":bnex<cr>",
   ["<S-Tab>"] = ":bprevious<cr>",
 }
+
 -- cmp settings
 lvim.builtin.cmp.mapping["<Tab>"] = lvim.builtin.cmp.mapping["<CR>"]
 lvim.builtin.cmp.mapping["<CR>"] = nil
@@ -177,12 +178,9 @@ vim.opt.timeoutlen = 10
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
+lvim.plugins = {
+  "wakatime/vim-wakatime"
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
