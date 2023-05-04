@@ -1,0 +1,23 @@
+{
+  "DPrintf": {
+    "prefix": "dp",
+    "body": [
+      "DPrintf(\"$1\")"
+    ],
+    "description": "Snippet for user customed DPrintf()"
+  },
+  "max": {
+    "prefix": "fmax",
+    "body": [
+      "func max(a, b int) int {\n\tif a > b {\n\t\treturn a\n\t}\n\treturn b\n}"
+    ],
+    "description": "Snippet for user defined max()"
+  },
+  "min": {
+    "prefix": "fmin",
+    "body": [
+      "func min(a, b int) int {\n\tif a < b {\n\t\treturn a\n\t}\n\treturn b\n}"
+    ],
+    "description": "Snippet for user defined min()"
+  }
+}
