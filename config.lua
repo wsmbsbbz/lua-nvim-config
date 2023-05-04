@@ -24,6 +24,14 @@ lvim.keys.normal_mode = {
   ["<Tab>"] = ":bnex<cr>",
   ["<S-Tab>"] = ":bprevious<cr>",
 }
+-- cmp settings
+lvim.builtin.cmp.mapping["<Tab>"] = lvim.builtin.cmp.mapping["<CR>"]
+lvim.builtin.cmp.mapping["<CR>"] = nil
+lvim.builtin.cmp.experimental.ghost_text = true
+lvim.builtin.cmp.completion.completeopt = "menu,menuone"
+lvim.builtin.cmp.completion.keyword_length = 0
+-- lvim.builtin.cmp.preselect = require("cmp").PreselectMode.Item
+
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
