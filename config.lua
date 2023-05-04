@@ -80,7 +80,6 @@ lvim.builtin.which_key.mappings["<space>"] = { "", "NULL" }
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
-lvim.builtin.terminal.execs = { { "lazygit", "gg", "LazyGit" }, { "gdb", "tg", "GNU Debugger" } }
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
