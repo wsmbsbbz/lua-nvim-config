@@ -64,6 +64,7 @@ lvim.builtin.cmp.completion.keyword_length = 0
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["<space>"] = { "", "NULL" }
+lvim.builtin.which_key.mappings["y"] = { "<cmd>%yank +<CR>", "Yank buffer" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
