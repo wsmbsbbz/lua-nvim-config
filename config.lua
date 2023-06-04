@@ -65,6 +65,7 @@ lvim.builtin.cmp.completion.keyword_length = 0
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["<space>"] = { "", "NULL" }
 lvim.builtin.which_key.mappings["y"] = { "<cmd>%yank +<CR>", "Yank buffer" }
+lvim.builtin.which_key.vmappings["y"] = { "<cmd>yank +<CR>", "Yank selected content" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
@@ -144,7 +145,6 @@ vim.opt.timeoutlen = 10
 -- end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
---   { command = "isort", filetypes = { "python" } },
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black",   filetypes = { "python" } },
@@ -181,7 +181,7 @@ formatters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  "wakatime/vim-wakatime"
+  { "wakatime/vim-wakatime" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
