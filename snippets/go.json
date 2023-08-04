@@ -1,0 +1,26 @@
+{
+  "max": {
+    "prefix": "fmax",
+    "body": [
+      "func max(a, b int) int",
+      "\tif a > b {",
+      "\t\treturn a",
+      "\t}",
+      "\treturn b",
+      "}"
+    ],
+    "description": "max value of two integers"
+  },
+  "min": {
+    "prefix": "fmin",
+    "body": [
+      "func min(a, b int) int",
+      "\tif a < b {",
+      "\t\treturn a",
+      "\t}",
+      "\treturn b",
+      "}"
+    ],
+    "description": "min value of two integers"
+  }
+}
