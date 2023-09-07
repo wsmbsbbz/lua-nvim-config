@@ -5,5 +5,5 @@ local opt = vim.opt
 
 opt.expandtab = false
 opt.clipboard = ""
-opt.spell = true
-opt.spelllang = "en,cjk"
+-- opt.spell = true
+-- opt.spelllang = "en,cjk"
